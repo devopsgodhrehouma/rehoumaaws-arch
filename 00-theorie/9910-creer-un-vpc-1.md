@@ -72,14 +72,128 @@ Dans ce guide, nous allons vous accompagner à travers les étapes de création 
 
 ---
 
-### Guide pour les Intermédiaires : Créer ton VPC - Le Luxe de la Gestion de Réseau dans le Cloud
-
-Ce guide suit les mêmes étapes de base que pour les débutants, mais avec un niveau de détail accru, notamment en ce qui concerne les aspects techniques comme la configuration des NAT Gateways, des ACLs, et des tables de routage. Chaque étape est conçue pour donner une compréhension plus approfondie et technique de la gestion d'un VPC.
+### SCHÉMA
 
 ---
 
-### Guide pour les Confirmés : Création d'un VPC - Guide Technique avec une Touche d'Humour
+```plaintext
+_________________________________________________________________________________
+|                                                                                 |
+|                            Guide de Création d'un VPC                           |
+|                                                                                 |
+|---------------------------------------------------------------------------------|
+|   Résumé                                                                        |
+|   Ce guide vous accompagne à travers les étapes de création d'un VPC (Virtual   |
+|   Private Cloud) de manière simple et humoristique. Que vous soyez débutant     |
+|   ou utilisateur avancé, ce guide est fait pour vous.                           |
+|                                                                                 |
+|---------------------------------------------------------------------------------|
+|   Table des Matières                                                            |
+|   1. Choisir son Domaine (Créer le VPC)                                         |
+|   2. Séparer les Espaces (Créer les Subnets)                                    |
+|   3. Configurer les Routes (Tables de Routage)                                  |
+|   4. Engager les Gardiens (Configurer l'IGW et les NAT Gateways)                |
+|   5. Établir les Règles (Configurer les Groupes de Sécurité et ACLs)            |
+|   6. Sécuriser l'Accès à Distance (Configurer le Bastion)                       |
+|   7. Accueillir les Invités (Configurer le Load Balancer)                       |
+|   8. Prévoir les Fêtes de Folie (Configurer l'Auto Scaling)                     |
+|   9. La Haute Disponibilité (Configurer la HA)                                  |
+|  10. Lancer les Invitations (Finaliser et Déployer)                             |
+|_________________________________________________________________________________|
 
-Ce guide va encore plus loin en approfondissant chaque aspect technique du VPC, en couvrant les tables de routage, les ACLs, les groupes de sécurité, et la haute disponibilité avec une attention particulière aux détails techniques nécessaires pour gérer un environnement complexe et sécurisé.
+                                 _____
+      __                        /     \                     ____  
+     |  |                      /       \                   |    | 
+     |  |                     /         \   (Créer le      |    |
+     |__|                    /           \   VPC)         _|____|_
+                            /_____________\              |        |    
+                                                      
+  1. Choisir son Domaine (Créer le VPC)
+  --------------------------------------------------
+  Avant de bâtir ta villa de rêve, tu choisis le terrain parfait.
+  Ton VPC, c’est ton coin exclusif dans le cloud, où tu es le maître. 
+  Tu décides qui entre et qui reste dehors.
+  Analogie : Créer un VPC, c’est comme choisir le lieu idéal pour construire ta villa privée.
+    
+                                _______  
+  2. Séparer les Espaces      /       \
+     (Créer les Subnets)      |Public  |  <--- Subnet Public : Le jardin
+                              |Subnet  |       est accessible à tous.
+                              |_______/
+                              _______  
+                             /       \
+                             |Private |  <--- Subnet Privé : Le jacuzzi 
+                             |Subnet  |       est réservé à ton cercle intime.
+                             |_______/
+  
+  3. Configurer les Routes    ________     ________  
+     (Tables de Routage)     |        |   |        |   
+                             | Subnet |   | Subnet |   
+                             | Public |-->| Privé  |   
+                             |________|   |________|  
+                                    |       |
+    Route Locale : Permet          Route vers IGW : Pour permettre 
+    aux subnets de communiquer      aux subnets publics d'accéder à 
+    entre eux au sein du VPC.       l'extérieur.
+
+  4. Engager les Gardiens    _______       _______  
+     (IGW et NAT Gateways)  /       \     /       \  
+                           | IGW    |<-->| NAT    |  <-- NAT Gateway Privée : La sortie discrète 
+                           |_______/     |Gateway|      pour tes subnets privés.
+                             ^           |_______|      
+                             |                     <-- NAT Gateway Publique : La sortie sur 
+                             |                          le tapis rouge pour tes subnets publics.
+                             |
+                          L'IGW (Internet Gateway) est ton videur 
+                          à l’entrée, laissant entrer les invités VIP.
+                         
+  5. Établir les Règles     ________   
+     (Groupes de Sécurité) |        |<--- Groupe de Sécurité : Les règles
+                           | SG     |     strictes pour que seuls ceux qui
+                           |________|     ont le bon code puissent entrer.
+  
+  6. Sécuriser l'Accès     ________   
+     à Distance           |        |<--- Bastion : Accès sécurisé pour
+     (Configurer le       |Bastion |     gérer les ressources dans les subnets privés.
+     Bastion)             |________|
+
+  7. Accueillir les Invités ________ 
+     (Load Balancer)      |        |<--- Load Balancer : S'assure que chaque invité
+                          |  LB    |     trouve sa place sans bousculade.
+                          |________|
+
+  8. Prévoir les Fêtes de _________ 
+     Folie               |         |<--- Auto Scaling Group : Plan d’urgence quand 
+     (Auto Scaling)      | ASG     |     la fête devient incontrôlable.
+                         |_________|
+
+  9. La Haute Disponibilité ________ 
+     (Configurer la HA)   |        |<--- Haute Disponibilité (HA) : Garantit 
+                          |  HA    |     que même en cas de panne, la fête continue.
+                          |________|
+
+  10. Lancer les Invitations ________ 
+      (Finaliser et        |        |<--- Finaliser et déployer : Tout est prêt, 
+      Déployer)            | Deploi |     il ne reste plus qu'à profiter.
+                          |_________|
+```
+
+### Explications :
+
+1. **Choisir son Domaine** : Représente la création du VPC, votre propre espace dans le cloud.
+2. **Séparer les Espaces** : Créer les subnets pour diviser les ressources en espaces publics et privés.
+3. **Configurer les Routes** : Utilisation des tables de routage pour diriger le trafic entre les subnets et vers l'extérieur.
+4. **Engager les Gardiens** : Configurer l'Internet Gateway et les NAT Gateways pour gérer l'accès et les sorties.
+5. **Établir les Règles** : Mise en place des groupes de sécurité pour contrôler les accès.
+6. **Sécuriser l'Accès à Distance** : Utilisation du Bastion pour accéder en toute sécurité aux subnets privés.
+7. **Accueillir les Invités** : Configuration du Load Balancer pour répartir efficacement le trafic.
+8. **Prévoir les Fêtes de Folie** : Configuration de l'Auto Scaling pour gérer les pics de demande.
+9. **La Haute Disponibilité** : Assurer la continuité du service même en cas de panne.
+10. **Lancer les Invitations** : Finalisation du déploiement et ouverture du VPC pour utilisation.
+
+Ce schéma ASCII fournit une vue d'ensemble complète de chaque étape du processus de création d'un VPC, tout en utilisant des analogies simples pour faciliter la compréhension.
+
+
+
 
 -
