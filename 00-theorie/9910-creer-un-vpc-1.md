@@ -82,6 +82,4 @@ Ce guide suit les mêmes étapes de base que pour les débutants, mais avec un n
 
 Ce guide va encore plus loin en approfondissant chaque aspect technique du VPC, en couvrant les tables de routage, les ACLs, les groupes de sécurité, et la haute disponibilité avec une attention particulière aux détails techniques nécessaires pour gérer un environnement complexe et sécurisé.
 
----
-
-Ce plan structuré et organisé donne un aperçu clair de chaque étape dans la création d'un VPC, avec des explications adaptées aux différents niveaux de compétence. Les concepts sont vulgarisés pour les débutants, tout en devenant plus techniques et détaillés pour les intermédiaires et confirmés.
+-
