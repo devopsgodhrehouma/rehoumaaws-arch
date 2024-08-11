@@ -103,7 +103,9 @@ Destination        | Cible
 - Ces exemples montrent comment configurer vos tables de routage pour diriger le trafic correctement en utilisant les composants définis. 
 - Les tables de routage sont cruciales pour s'assurer que le trafic est envoyé vers les bonnes destinations, qu'il s'agisse d'Internet, d'autres sous-réseaux, ou d'autres réseaux privés.
 
-# Shéma et scénario 
+---
+
+# 2 - Shéma et scénario 
 
 Pour visualiser la configuration des **Internet Gateway (IGW)**, **NAT Gateway privée**, **NAT Gateway publique**, et les **tables de routage** associées, voici des exemples de configurations.
 
