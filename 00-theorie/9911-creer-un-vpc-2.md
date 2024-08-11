@@ -64,8 +64,3 @@ Ce guide vous accompagne pas à pas pour créer un VPC, en utilisant des analogi
 #### **10. Lancer les Invitations (Finaliser et déployer)**
 - **Description**: Tout est prêt : ta villa est somptueuse, sécurisée, et prête à accueillir les invités. Tu n’as plus qu’à ouvrir les portes et à savourer chaque moment, en sachant que tout est sous contrôle.
 - **Analogie**: Une fois tout configuré, il est temps d’utiliser ton VPC et de profiter des performances et de la sécurité que tu as mises en place.
-
----
-
-### **Conclusion**
-Ce guide remanié place les tables de routage à une étape plus logique dans le processus, juste après la création des subnets, pour une compréhension plus fluide et cohérente. Chaque étape est accompagnée d'une explication simple et d'une analogie pour rendre le concept accessible même aux débutants.
