@@ -1,5 +1,4 @@
-
-----
+---
 # Pour les très débutants: 
 ----
 
@@ -17,7 +16,14 @@
    **Mais pour le jacuzzi privé, seul ton cercle intime a accès — voilà ton subnet privé."**  
    Les subnets publics sont comme les parties de ta villa ouvertes aux invités, tandis que les subnets privés sont réservés à ceux qui ont une invitation spéciale.
 
-3. **"Étape 3 : Engager les Gardiens"**  
+3. **"Étape 3 : Configurer les Routes"**  
+   **"Il est essentiel que chacun sache où il doit aller.**  
+   **Les tables de routage dans ton VPC dirigent le trafic vers les bons endroits :**  
+   **Une route locale pour permettre aux subnets de communiquer entre eux à l’intérieur du VPC,**  
+   **et une route vers l'IGW pour permettre aux subnets publics d'accéder à l'extérieur."**  
+   Les tables de routage assurent que chaque paquet de données trouve sa destination, que ce soit pour les communications internes au VPC ou pour l'accès à l'Internet via l'IGW.
+
+4. **"Étape 4 : Engager les Gardiens"**  
    **"Comme dans une soirée exclusive, il te faut des portiers.**  
    **L'IGW, c’est le videur à l’entrée, qui laisse entrer les VIP.**  
    **Et pour les sorties, tu as deux options : la NAT Gateway privée et la NAT Gateway publique.**  
@@ -25,35 +31,36 @@
    **La NAT Gateway publique, c’est la grande sortie sur le tapis rouge pour tes subnets publics, leur permettant d’interagir avec le monde extérieur tout en conservant une couche de protection."**  
    L'Internet Gateway (IGW) est ton accès principal à l’extérieur, tandis que la NAT Gateway privée permet aux subnets privés d'accéder à l'Internet sans révéler leurs adresses IP, et la NAT Gateway publique permet aux subnets publics d'accéder directement à l'Internet tout en masquant certains détails pour plus de sécurité.
 
-4. **"Étape 4 : Établir les Règles"**  
+5. **"Étape 5 : Établir les Règles"**  
    **"Pas de villa sans sécurité ! Tu mets en place des règles strictes pour que seuls ceux qui ont le bon code puissent entrer.**  
    **Tu ne laisses passer que les personnes de confiance, et tout est sous contrôle."**  
    Les règles de sécurité de ton VPC sont comme des videurs sévères à la porte, s’assurant que personne d’indésirable ne pénètre dans ton domaine.
 
-5. **"Étape 5 : Accueillir tes Invités"**  
+6. **"Étape 6 : Accueillir tes Invités"**  
    **"Ton Load Balancer, c’est ton majordome digital. Il s’assure que chaque invité trouve sa place, sans bousculade.**  
    **Qu’il y ait dix ou mille personnes, il veille à ce que chacun soit servi rapidement et avec classe."**  
    Le Load Balancer répartit le trafic de manière élégante, assurant une expérience fluide pour tous tes utilisateurs.
 
-6. **"Étape 6 : Prévoir les Fêtes de Folie"**  
+7. **"Étape 7 : Prévoir les Fêtes de Folie"**  
    **"Ton Auto Scaling Group, c’est ton plan d’urgence quand la fête devient incontrôlable.**  
    **Si la salle de danse déborde, il appelle des renforts, et personne ne reste sur le carreau.**  
    **La fête est toujours à son comble, sans jamais manquer de place."**  
    L’Auto Scaling Group ajuste automatiquement les ressources pour que tout roule parfaitement, même quand la demande explose.
 
-7. **"Étape 7 : La Haute Disponibilité, ou comment rester toujours prêt"**  
+8. **"Étape 8 : La Haute Disponibilité, ou comment rester toujours prêt"**  
    **"Imagine que ton jacuzzi tombe en panne. Pas de panique, tu as un deuxième prêt à prendre la relève.**  
    **Avec la haute disponibilité (HA), si une partie de ta villa connaît un problème, une autre section prend le relais sans que tes invités ne se rendent compte de quoi que ce soit."**  
    La haute disponibilité garantit que même en cas de panne, tes services continuent de fonctionner sans interruption, assurant que la fête ne s'arrête jamais.
 
-8. **"Étape 8 : Lancer les Invitations"**  
+9. **"Étape 9 : Lancer les Invitations"**  
    **"Tout est prêt : ta villa est somptueuse, sécurisée, et prête à accueillir les invités.**  
    **Tu n’as plus qu’à ouvrir les portes et à savourer chaque moment, en sachant que tout est sous contrôle."**  
    Une fois tout configuré, il est temps d’utiliser ton VPC et de profiter des performances et de la sécurité que tu as mises en place.
 
 ---
+
 # Pour les intermédiaires: 
----
+----
 
 ### Créer ton VPC : Le Luxe de la Gestion de Réseau dans le Cloud
 
@@ -68,7 +75,13 @@
    **Les subnets privés, c’est le spa réservé aux clients VIP, à l’abri des regards indiscrets."**  
    Les subnets publics sont accessibles au public, tandis que les subnets privés sont des zones sécurisées pour des opérations sensibles.
 
-3. **"Étape 3 : Installer les Portes de Sécurité"**  
+3. **"Étape 3 : Configurer les Tables de Routage"**  
+   **"Les tables de routage sont essentielles pour diriger le trafic vers les bonnes destinations :**  
+   **Les routes locales permettent aux subnets de communiquer entre eux à l'intérieur du VPC.**  
+   **Les routes vers l'IGW permettent aux subnets publics d'accéder à l'Internet."**  
+   Les tables de routage assurent que chaque paquet de données trouve sa destination, en interne comme en externe.
+
+4. **"Étape 4 : Installer les Portes de Sécurité"**  
    **"Pas de domaine de luxe sans portiers pour réguler les entrées et sorties.**  
    **L'Internet Gateway (IGW), c’est ta porte principale, laissant entrer les invités triés sur le volet.**  
    **Ensuite, il y a les NAT Gateways :**  
@@ -76,34 +89,37 @@
    **La NAT Gateway publique, c’est l’entrée VIP avec tapis rouge, permettant à tes subnets publics d’interagir librement avec l’extérieur tout en conservant une certaine protection."**  
    L'IGW assure la connexion de ton réseau au monde extérieur, tandis que les NAT Gateways permettent aux subnets privés et publics de communiquer avec l'Internet, chacun avec son propre niveau de discrétion.
 
-4. **"Étape 4 : Mettre en Place les Règles de Sécurité"**  
+5. **"Étape 5 : Mettre en Place les Règles de Sécurité"**  
    **"Tu ne laisses pas n’importe qui entrer dans ton domaine.**  
    **Tu mets en place des règles de sécurité strictes, contrôlant chaque accès, comme un service de sécurité de haut niveau."**  
    Les règles de sécurité sont tes gardiens numériques, assurant que seules les connexions autorisées accèdent à tes ressources.
 
-5. **"Étape 5 : Accueillir les Invités"**  
+6. **"Étape 6 : Accueillir les Invités"**  
    **"Le Load Balancer, c’est ton maître d’hôtel digital, qui s’assure que chaque invité est bien dirigé vers sa destination.**  
    **Il distribue le trafic avec élégance, évitant les bouchons et assurant une expérience fluide."**  
    Le Load Balancer garantit une répartition efficace des ressources, assurant que chaque demande est traitée sans délai.
 
-6. **"Étape 6 : Préparer les Pics de Fréquentation"**  
+7. **"Étape 7 : Préparer les Pics de Fréquentation"**  
    **"Ton Auto Scaling Group est ton plan d’urgence pour les jours de grande affluence.**  
    **Quand la demande explose, il appelle des renforts pour que tout continue de fonctionner comme une horloge suisse."**  
-   L'Auto Scaling Group ajuste automatiquement les ressources disponibles pour répondre aux fluctuations de la demande.
+   L'Auto Scaling Group ajuste automatiquement les ressources disponibles pour répondre aux fluctuations de la
 
-7. **"Étape 7 : Assurer la Continuité du Service"**  
+ demande.
+
+8. **"Étape 8 : Assurer la Continuité du Service"**  
    **"La haute disponibilité (HA) est comme une assurance de luxe.**  
    **Même si une partie de ton infrastructure rencontre un problème, tes services continuent de tourner sans interruption, comme si de rien n’était."**  
    La haute disponibilité garantit que tes services restent opérationnels, même en cas de panne, assurant une continuité parfaite.
 
-8. **"Étape 8 : Ouvrir les Portes"**  
+9. **"Étape 9 : Ouvrir les Portes"**  
    **"Ton complexe est prêt, sécurisé et optimisé.**  
    **Il ne te reste plus qu’à ouvrir les portes et à profiter de la tranquillité d’esprit que procure une gestion impeccable."**  
    Une fois que tout est en place, ton VPC est prêt à fonctionner, offrant sécurité, performance et contrôle total.
 
 ---
+
 # Pour les confirmés
-----
+---
 
 ### Création d'un VPC : Guide Technique avec une Touche d'Humour
 
@@ -116,18 +132,20 @@
    **Les subnets publics sont les zones où les ressources sont directement accessibles depuis l'Internet.**  
    **Les subnets privés, eux, sont réservés pour les ressources qui n’ont pas besoin d’interagir directement avec l'extérieur, ou qui doivent être protégées des accès non autorisés."**
 
-3. **"Étape 3 : Ajouter l'Internet Gateway (IGW)"**  
+3. **"Étape 3 : Configurer les Tables de Routage"**  
+   **"Les tables de routage sont essentielles pour diriger le trafic vers les bonnes destinations :**  
+   **Les routes locales permettent aux subnets de communiquer entre eux à l'intérieur du VPC.**  
+   **Les routes vers l'IGW permettent aux subnets publics d'accéder à l'Internet."**  
+   Les tables de routage assurent que chaque paquet de données trouve sa destination, en interne comme en externe.
+
+4. **"Étape 4 : Ajouter l'Internet Gateway (IGW)"**  
    **"L’IGW est essentiel pour permettre à tes ressources dans les subnets publics d’accéder à l'Internet.**  
    **C’est la porte d'entrée et de sortie de ton VPC pour les communications extérieures."**
 
-4. **"Étape 4 : Configurer les NAT Gateways"**  
+5. **"Étape 5 : Configurer les NAT Gateways"**  
    **"Les NAT Gateways jouent un rôle crucial pour les subnets privés.**  
    **Une NAT Gateway publique permet à tes instances dans les subnets privés d'accéder à l'Internet tout en masquant leurs adresses IP privées.**  
    **La NAT Gateway privée, quant à elle, permet une communication sécurisée entre les subnets privés et d’autres sous-réseaux ou services au sein de ton VPC, sans exposer ces instances directement à l'Internet."**
-
-5. **"Étape 5 : Configurer les Tables de Routage"**  
-   **"Maintenant, il faut s’assurer que chaque subnet sait où envoyer son trafic.**  
-   **Les tables de routage permettent de diriger les paquets de données vers l'IGW pour les subnets publics, ou vers la NAT Gateway pour les subnets privés, garantissant que tout le monde arrive à destination en toute sécurité."**
 
 6. **"Étape 6 : Mettre en Place les Groupes de Sécurité et ACLs"**  
    **"La sécurité est primordiale.**  
@@ -149,3 +167,106 @@
 10. **"Étape 10 : Surveillance et Optimisation"**  
    **"Enfin, il ne te reste plus qu'à surveiller ton VPC avec des outils comme CloudWatch, pour t'assurer que tout fonctionne comme prévu.**  
    **Tu peux aussi optimiser les performances et les coûts en ajustant régulièrement les configurations selon les besoins."**
+
+---
+# Schema 
+----
+
+Voici une représentation en code ASCII qui illustre les différentes étapes pour la création d'un VPC, en mettant l'accent sur l'ordre des opérations avec les tables de routage placées de manière logique :
+
+```plaintext
++-----------------------------+
+|      Créer ton VPC           |
+|        (Lab VPC)             |
+|  -------------------------  |
+|  Choisir ton Domaine         |
+|  (Ton propre espace cloud)   |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|      Séparer les Espaces     |
+|      (Créer les Subnets)     |
+|  -------------------------  |
+|  Subnet Public               |
+|  Subnet Privé                |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|      Configurer les Routes   |
+|      (Tables de Routage)     |
+|  -------------------------  |
+|  Route Locale                |
+|  Route vers IGW              |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|      Engager les Gardiens    |
+| (IGW & NAT Gateways)         |
+|  -------------------------  |
+|  IGW : Accès principal       |
+|  NAT Gateway Privée          |
+|  NAT Gateway Publique        |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|      Établir les Règles      |
+|    (Groupes de Sécurité)     |
+|  -------------------------  |
+|  Contrôle des accès          |
+|  (Sécuriser le VPC)          |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|     Accueillir les Invités   |
+|   (Load Balancer)            |
+|  -------------------------  |
+|  Répartition du trafic       |
+|  Optimisation des services   |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|   Prévoir les Fêtes de Folie |
+|   (Auto Scaling Group)       |
+|  -------------------------  |
+|  Gestion des pics de trafic  |
+|  Renforts automatiques       |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|   La Haute Disponibilité     |
+|    (HA Configuration)        |
+|  -------------------------  |
+|  Continuité de service       |
+|  Gestion des pannes          |
++-----------------------------+
+             |
+             v
++-----------------------------+
+|       Lancer les Invitations |
+|     (Déploiement final)      |
+|  -------------------------  |
+|  Accès aux services          |
+|  Surveillance et optimisation|
++-----------------------------+
+```
+
+### Explications :
+
+- **Créer ton VPC** : Représente la création de l'espace réseau personnel.
+- **Séparer les Espaces** : Créer des subnets pour organiser les ressources.
+- **Configurer les Routes** : Définir les tables de routage pour guider le trafic.
+- **Engager les Gardiens** : Configurer l'Internet Gateway et les NAT Gateways pour gérer l'accès interne et externe.
+- **Établir les Règles** : Mettre en place des groupes de sécurité pour contrôler les accès.
+- **Accueillir les Invités** : Configurer un Load Balancer pour gérer le trafic de manière efficace.
+- **Prévoir les Fêtes de Folie** : Utiliser un Auto Scaling Group pour s'adapter aux variations de la demande.
+- **La Haute Disponibilité** : Assurer que les services restent opérationnels en cas de panne.
+- **Lancer les Invitations** : Finaliser le déploiement et commencer à utiliser le VPC.
+
+Chaque étape est représentée par un bloc qui illustre l'évolution du processus de création d'un VPC de manière structurée et logique.
