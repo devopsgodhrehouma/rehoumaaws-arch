@@ -1,4 +1,4 @@
-### Dates de présentation pour les examens mi-session
+# 1 - Dates de présentation pour les examens mi-session (COURS BIG DATA)
 
 | Nom et prénom      | Module pour examen mi-session | Date de présentation |
 |-------------------|-------------------------------|----------------------|
@@ -19,7 +19,7 @@
 
 
 ---
-# Résumé des laboratoires : 
+# 2 - Résumé des laboratoires : 
 ---
 
 
@@ -40,3 +40,27 @@
 | **Module 13 : Passerelle vers la certification**              | Préparation pour la certification AWS.                                                                   | Aucun laboratoire spécifié.                                                                       |
 | **Projet de Synthèse**                                        | Projet intégrateur couvrant les concepts appris au cours.                                               | Aucun laboratoire spécifié.                                                                       |
 
+---
+# 3 - Résumé des cours: 
+----
+
+Voici un tableau récapitulatif en français des résumés pour chaque module du cours "AWS Academy Data Engineering" :
+
+| **Module**                                      | **Résumé**                                                                                                          |
+|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| **Module 1 : Bienvenue dans AWS Academy Data Engineering** | Introduction au cours et présentation des ressources pour les étudiants.                                              |
+| **Module 2 : Organisations axées sur les données**          | Introduction aux décisions basées sur les données, rôle de l'ingénieur de données, stratégies modernes de données.    |
+| **Module 3 : Les éléments des données**                      | Exploration des cinq V des données : Volume, Vélocité, Variété, Véracité, et Valeur, et activités pour les améliorer. |
+| **Module 4 : Principes et modèles de conception pour les pipelines de données** | Aperçu du cadre bien architecturé d'AWS, évolution des architectures de données, pipelines modernes sur AWS.          |
+| **Module 5 : Sécurisation et mise à l'échelle du pipeline de données** | Discussion sur la sécurité des charges analytiques, sécurité en ML, et création d'une infrastructure évolutive.       |
+| **Module 6 : Ingestion et préparation des données**           | Comparaison entre les processus ETL et ELT, introduction au data wrangling, nettoyage, enrichissement et validation.  |
+| **Module 7 : Ingestion par lot ou en flux continu**           | Comparaison entre l'ingestion par lot et en flux, outils d'ingestion dédiés, AWS Glue pour le traitement par lot.     |
+| **Module 8 : Stockage et organisation des données**           | Exploration des solutions de stockage moderne : lacs de données, entrepôts, bases de données dédiées et sécurisation. |
+| **Module 9 : Traitement des Big Data**                        | Concepts de traitement des Big Data, outils comme Apache Hadoop et Spark, gestion des clusters Amazon EMR.            |
+| **Module 10 : Traitement des données pour le Machine Learning** | Introduction aux concepts de ML, cycle de vie du ML, ingénierie des caractéristiques et infrastructure ML sur AWS.    |
+| **Module 11 : Analyse et visualisation des données**          | Choix d'outils pour l'analyse et la visualisation des données sur AWS, comparaisons et cas d'utilisation.             |
+| **Module 12 : Automatisation du pipeline**                    | Automatisation du déploiement de l'infrastructure, CI/CD, utilisation des Step Functions pour orchestrer les ETL.     |
+| **Module 13 : Passerelle vers la certification**              | Préparation pour la certification AWS, révision et ressources complémentaires.                                       |
+| **Projet de Synthèse**                                        | Projet intégrateur final couvrant tous les concepts et pratiques abordés au cours du programme.                       |
+
+----
