@@ -9,10 +9,27 @@ Je vous rappelle les échéances importantes pour ce semestre :
 
 Merci de respecter ces échéances pour assurer le bon déroulement de vos évaluations.
 
+---
+
+# Tableau récapitulatif des échéances :
+
+---
+
+| **Tâche**              | **Détails**                                                | **Date limite**  |
+|------------------------|------------------------------------------------------------|------------------|
+| Rapport mi-session     | Soumettre un rapport avec les étapes et des captures d'écran | 27 septembre     |
+| Labs                   | Compléter et soumettre tous les labs                       | 27 septembre     |
+| Projet Capstone        | Soumettre le projet final Capstone                          | 18 octobre       |
 
 
+
+
+
+---
 
 # 1 - Dates de présentation pour les examens mi-session (COURS BIG DATA)
+
+---
 
 | Nom et prénom      | Module pour examen mi-session | Date de présentation |
 |-------------------|-------------------------------|----------------------|
