@@ -75,7 +75,6 @@ Merci de respecter ces échéances pour assurer le bon déroulement de vos éval
 # 3 - Résumé des cours: 
 ----
 
-Voici un tableau récapitulatif en français des résumés pour chaque module du cours "AWS Academy Data Engineering" :
 
 | **Module**                                      | **Résumé**                                                                                                          |
 |-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
