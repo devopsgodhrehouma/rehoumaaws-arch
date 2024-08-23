@@ -33,10 +33,10 @@ Merci de respecter ces échéances pour assurer le bon déroulement de vos éval
 
 | Nom et prénom      | Module pour examen mi-session | Date de présentation |
 |-------------------|-------------------------------|----------------------|
-| Mustapha          | TO DO                         | 30 août              |
-| Mohammed Dehane   | Module 7                      | 6 septembre          |
-| Nydia Trejo       | Module 3                      | 13 septembre         |
-| Tony              | Module 4                      | 20 septembre         |
+| Mustapha          | Module 10 - ML                         | 30 août              |
+| Mohammed Dehane   | Module 7 - ETL                     | 6 septembre          |
+| Nydia Trejo       | Module 3 - 5V                      | 13 septembre         |
+| Tony              | Module 4 - Athena                    | 20 septembre         |
 | Cédric            | TO DO                         | 27 septembre         |
 
 ### Dates de présentation pour les laboratoires
@@ -44,7 +44,7 @@ Merci de respecter ces échéances pour assurer le bon déroulement de vos éval
 |-------------------|-------------------------|----------------------|
 | Mustapha          | Module 12                 | 4 octobre            |
 | Mohammed Dehane   | Module 9                | 11 octobre           |
-| Nydia Trejo       | Module 8                | Lundi 14 octobre      |
+| Nydia Trejo       | Module 8                | 11 octobre      |
 | Tony              | Module 5                | 18 octobre           |
 | Cédric            | TO DO                   | 18 octobre |
 
