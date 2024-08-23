@@ -1,3 +1,17 @@
+# Important
+
+Chers étudiants,
+
+Je vous rappelle les échéances importantes pour ce semestre :
+1. **Rapport mi-session :** Vous devez soumettre un rapport comprenant les étapes détaillées et des captures d'écran de votre travail. La date limite pour ce rapport est le **27 septembre**.
+2. **Labs :** Assurez-vous de compléter tous les labs avant la date limite du **27 septembre**.
+3. **Projet Capstone :** La date limite pour soumettre votre projet Capstone est le **18 octobre**.
+
+Merci de respecter ces échéances pour assurer le bon déroulement de vos évaluations.
+
+
+
+
 # 1 - Dates de présentation pour les examens mi-session (COURS BIG DATA)
 
 | Nom et prénom      | Module pour examen mi-session | Date de présentation |
