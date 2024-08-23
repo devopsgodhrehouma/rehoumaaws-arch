@@ -18,8 +18,8 @@ Merci de respecter ces échéances pour assurer le bon déroulement de vos éval
 | **Tâche**              | **Détails**                                                | **Date limite**  |
 |------------------------|------------------------------------------------------------|------------------|
 | Rapport mi-session     | Soumettre un rapport avec les étapes et des captures d'écran | 27 septembre     |
-| Labs                   | Compléter et soumettre tous les labs                       | 27 septembre     |
-| Projet Capstone        | Soumettre le projet final Capstone                          | 18 octobre       |
+| Labs                   | Soumettre un rapport avec les étapes et des captures d'écran                      | 27 septembre     |
+| Projet Capstone        | Soumettre un rapport avec les étapes et des captures d'écran                         | 18 octobre       |
 
 
 
