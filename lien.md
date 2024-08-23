@@ -3,10 +3,11 @@
 
 ## Travaux
 
-- [Vidéo de la dernière fois](https://drive.google.com/drive/folders/18I8jCiKhtscAyg6yemFA58omA70WcZID?usp=sharing)
+- [Vidéos](https://drive.google.com/drive/folders/18I8jCiKhtscAyg6yemFA58omA70WcZID?usp=sharing)
 - [Correction Labs](https://drive.google.com/drive/folders/1A6m95oF9UTzquATnumUmqVxB0UBsG8tg?usp=sharing)
 - [Commandes GitHub](https://github.com/devopsgodhrehouma/rehoumaaws-arch/blob/main/02-labSiteWeb/02-commandes02.md)
 
+- https://github.com/devopsgodhrehouma/rehoumaaws-arch/blob/main/02-labSiteWeb/01-commandes.md
 
 
 - https://drive.google.com/drive/folders/1A6m95oF9UTzquATnumUmqVxB0UBsG8tg?usp=sharing
