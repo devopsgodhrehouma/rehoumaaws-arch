@@ -31,7 +31,11 @@
 
 ## Dossier theorie 1
 
-## Deploiement
+## Dossier theorie 2 ## Deploiement
 
-## Projetaws
+## Dossier theorie 3 ## Projetaws
 - https://drive.google.com/drive/folders/1Z4SylRERCZolGTCVE85dktQS__6G94YO?usp=sharing
+
+  ## Dossier theorie 4 - devops god
+
+  ## Dossier theorie 5 -presentation ppt +CDI dans aws drive 2024
