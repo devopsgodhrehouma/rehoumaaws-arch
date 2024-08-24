@@ -29,6 +29,6 @@
 - [Commandes GitHub](https://github.com/devopsgodhrehouma/rehoumaaws-arch/blob/main/02-labSiteWeb/02-commandes02.md)
 - https://drive.google.com/drive/folders/1lp8hotejRKnu90ZASGrexDhh8qr9drLk?usp=sharing
 
-## Dosssier theorie
+## Dossier theorie 1
 
 ## Deploiement
