@@ -39,3 +39,5 @@
   ## Dossier theorie 4 - devops god
 
   ## Dossier theorie 5 -presentation ppt +CDI dans aws drive 2024
+
+  Mettre le tous dans le nouveau repertoire + questions examens + livre + le repo Githunb que j'ai forké
